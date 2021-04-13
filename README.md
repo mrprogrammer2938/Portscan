@@ -1,4 +1,4 @@
-# Portscan
+# portscan
 This code write by [Ms.nope](https://github.com/msprogrammer2938)
 ### Working
 - [Portscanning](https://en.wikipedia.org/wiki/Port_scanner)
