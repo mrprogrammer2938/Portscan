@@ -20,6 +20,7 @@ bash install.sh
 ### [Ms.nope](https://github.com/msprogrammer2938) Account...
 [Instagram](https://instagram.com/programmer2938)
 
-check My new Tools : [DDos-Attack](https://github.com/msprogrammer2938/DDos-Attacl)
+check My new Tool : [DDos-Attack](https://github.com/msprogrammer2938/DDos-Attacl)
+
 check My github : https://github.com/msprogrammer2938
 
