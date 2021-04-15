@@ -16,7 +16,10 @@ bash install.sh
 
 ./portscan
 ```
-
+## run root...
+```
+sudo su
+```
 ### [Ms.nope](https://github.com/msprogrammer2938) Account...
 [Instagram](https://instagram.com/programmer2938)
 
