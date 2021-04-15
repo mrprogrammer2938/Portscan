@@ -1,6 +1,12 @@
 #!/usr/bin/bash
 # This code write by (Ms.nope)
 # installing portscan
+if [[ "$(id -u)" -ne 0 ]]; then
+    echo "please run this programm as root!"
+    sleep 1
+    echo "
+    usage root: sudo su"
+    exit 1
 printf '\033]2;Installing Portscan installing\a'
 clear
 echo "installing..."
@@ -21,9 +27,9 @@ if [[ $? -eq 0 ]]; then
     echo "Installing portscan package..."
     echo ""
     sleep 1
-    sudo apt install update
-    sudo apt install python3
-    sudo apt install python-pip
+    apt install update
+    apt install python3
+    apt install python-pip
     pip install --upgrade pip
     chmod +x portscan
     pip install requirments.txt
