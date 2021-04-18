@@ -1,12 +1,6 @@
 #!/usr/bin/bash
 # This code write by (Ms.nope)
 # installing portscan
-if [[ "$(id -u)" -ne 0 ]]; then
-    echo "please run this programm as root!"
-    sleep 1
-    echo "
-    usage root: sudo su"
-    exit 1
 printf '\033]2;Installing Portscan installing\a'
 clear
 echo "installing..."
