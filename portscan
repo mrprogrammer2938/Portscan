@@ -1,0 +1,63 @@
+#!/usr/bin/python3
+# This code write by (Ms.nope)
+'''
+Imports
+'''
+#######################################
+import socket 
+import os
+import time
+import sys
+from colorama import init, Fore
+#######################################
+init()
+GREEN = Fore.GREEN
+RESET = Fore.RESET
+GRAY = Fore.LIGHTBLACK_EX
+def cls():
+    os.system("clear")
+def is_port_open(host, port):
+    # creates a new socket
+    s = socket.socket()
+    try:
+        s.connect((host, port))
+        s.settimeout(0.2)
+    except:
+        return False
+    else:
+        # the connection was established, port is open!
+        return True
+#################
+def banner():
+    print(Fore.GREEN + """
+    
+    ____   ___   ____  ______       _____   __   ____  ____  
+   |    \ /   \ |    \|      |     / ___/  /  ] /    ||    \ 
+   |  o  )     ||  D  )      |    (   \_  /  / |  o  ||  _  |
+   |   _/|  O  ||    /|_|  |_|     \__  |/  /  |     ||  |  |  """ + Fore.RED + """ version 1.2.1 """ + Fore.GREEN + """
+   |  |  |     ||    \  |  |       /  \ /   \_ |  _  ||  |  |   
+   |  |  |     ||  .  \ |  |       \    \     ||  |  ||  |  |
+   |__|   \___/ |__|\_| |__|        \___|\____||__|__||__|__|
+                                                          """ + Fore.WHITE + Fore.RED + """
+    ------[This code write by """ + Fore.GREEN + "Ms.nope" + Fore.RED + """ ]---------""" + Fore.GREEN + """
+    -------- Ms.nope github:""" + Fore.BLUE + """https://github.com/msprogrammer2938""" + Fore.GREEN + """ ]------- """ + Fore.WHITE)
+def menu():
+    os.system("printf '\033]2;Port Scan\a'")
+    cls()
+    banner()
+    host = input("\nEnter ip: ")
+    time.sleep(1)
+    # iterate over ports, from 25 to 1025 !
+    print(Fore.RED + "------------------------------------------------------" + Fore.WHITE)
+    for port in range(25, 1025):
+       if is_port_open(host, port):
+          print(f"\n{GREEN}[+] {host}: {port} is open      {RESET}")
+       else:
+           print(f"\n{GRAY}[~] {host}: {port} is Filter    {RESET}", end="\r")
+    print(Fore.RED + "------------------------------------------------------" + Fore.WHITE)
+if __name__ == '__main__':
+  try:
+      menu()
+  except KeyboardInterrupt:
+      print(Fore.GREEN + "Exiting..." + Fore.WHITE)
+      sys.exit()
