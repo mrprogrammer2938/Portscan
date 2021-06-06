@@ -8,7 +8,7 @@ This code write by [Mr.nope](https://github.com/msprogrammer2938)
 
 **installing**
 ```
-git clone https://github.com/msprogrammer2938/Portscan.git
+git clone https://github.com/mrprogrammer2938/Portscan.git
 
 cd Portscan
 
